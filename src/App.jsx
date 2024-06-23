@@ -6,7 +6,7 @@ import Routes from "./components/Routes";
 
 function App() {
   // define some defaults for axios
-  axios.defaults.baseURL = "http://localhost:4001";
+  axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
   axios.defaults.withCredentials = true; // can be use so you can set cookies from the api  
   
   return (

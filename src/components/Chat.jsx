@@ -99,7 +99,7 @@ function Chat({ username }) {
     }, [selectedUserId]);
 
     function connecToWSS() {
-        const ws = new WebSocket('ws://localhost:4001') // connected to websocket server
+        const ws = new WebSocket(`ws://${import.meta.env.VITE_SERVER_URL}`) // connected to websocket server
         setWs(ws);
 
         ws.addEventListener('message', (e) => handleMessage(e));
